@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v6.1.2/css/all.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favico.ico" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>PolyPlay</title>
+  </head>
+  <body id="container">
+    <header>
+      <nav id="nav-bar" class="flex-column">
+        <ul class="flex-column">
+          <li>
+            <a href="./index.html">
+              <i class="fa fa-music"></i>
+              <span>Ma Bibliothèque</span>
+            </a>
+          </li>
+          <div class="saut"></div>
+          <li>
+            <a href="./create_playlist.html">
+              <i class="fa fa-plus"></i>
+              <span>Créer Playlist</span>
+            </a>
+          </li>
+          <div class="saut"></div>
+          <li>
+            <a href="./about.html">
+              <i class="fa fa-info-circle"></i>
+              <span>À Propos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-area" class="flex-column">
+      <div id="search-bar">
+        <form
+          id="search-form"
+          action=""
+          style="display: inline"
+          class="flex-row"
+        >
+          <div class="align-center">
+            <span
+              ><input
+                id="search-input"
+                type="text"
+                placeholder="Chercher une chanson..."
+            /></span>
+            <span
+              ><button
+                id="searchBut"
+                type="submit"
+                class="fa fa-2x fa-search"
+              ></button
+            ></span>
+          </div>
+        </form>
+      </div>
+      <div id="playlist-list">
+        <h1>Mes Playlists</h1>
+      </div>
+      <section class="playlist-container" id="playlist-container">
+        <a href="./playlist.html" class="playlist-item flex-column">
+          <div class="playlist-preview">
+            <img src="./assets/img/default.png" class="image" alt="" />
+            <i class="fa fa-2x fa-play-circle hidden playlist-play-icon"></i>
+          </div>
+          <p class="p1">Ma Premiere Playlist</p>
+          <p>Playlist de base</p>
+        </a>
+        <a href="./playlist.html" class="playlist-item flex-column">
+          <div class="playlist-preview">
+            <div>
+              <img src="./assets/img/rock.jpg" class="image" alt="" />
+              <i
+                id="yo"
+                class="fa fa-2x fa-play-circle hidden playlist-play-icon"
+              ></i>
+            </div>
+          </div>
+          <p class="p1">Playlist de Rock</p>
+          <p>Playlist avec une descrption beaucoup plus longue</p>
+        </a>
+        <a href="./playlist.html" class="playlist-item flex-column">
+          <div class="playlist-preview">
+            <img src="./assets/img/disc_weekly.jpeg" class="image" alt="" />
+            <i class="fa fa-2x fa-play-circle hidden playlist-play-icon"></i>
+          </div>
+          <p class="p1">Discover Weekly</p>
+          <p>Playlist avec beaucoup de chansons</p>
+        </a>
+      </section>
+      <span class="saut"></span>
+      <div id="songs-list">
+        <h1>Mes Chansons</h1>
+      </div>
+      <section id="song-container" class="flex-column">
+        <div class="song-item flex-row">
+          <p>Whip</p>
+          <p>Electronic</p>
+          <p>prazkhanal</p>
+          <button
+            type="submit"
+            class="fa-regular fa-2x fa-heart control-btn"
+          ></button>
+        </div>
+        <div class="song-item flex-row">
+          <p>Overflow</p>
+          <p>Classic</p>
+          <p>Piano Amor</p>
+          <button
+            type="submit"
+            class="fa-regular fa-2x fa-heart control-btn"
+          ></button>
+        </div>
+        <div class="song-item flex-row">
+          <p>Intrigue Fun</p>
+          <p>Jazz</p>
+          <p>Music Town</p>
+          <button type="submit" class="fa fa-2x fa-heart control-btn"></button>
+        </div>
+        <div class="song-item flex-row">
+          <p>Bounce</p>
+          <p>Electronic</p>
+          <p>Coma-Media</p>
+          <button
+            type="submit"
+            class="fa-regular fa-2x fa-heart control-btn"
+          ></button>
+        </div>
+        <div class="song-item flex-row">
+          <p>Summer Pranks</p>
+          <p>Rock</p>
+          <p>Lemon Music Studio</p>
+          <button type="submit" class="fa fa-2x fa-heart control-btn"></button>
+        </div>
+      </section>
+    </main>
+    <footer id="playing-bar" class="flex-row">
+      <div>
+        <p>
+          Choisir une playlist à travers la
+          <a href="./index.html">Bibliothèque</a> pour la faire jouer
+        </p>
+      </div>
+      <div id="creators" class="flex-column">
+        <p>Skander Hannachi 2088988</p>
+        <p>Omar Ben Thami 2114098</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+:root {
+    --main-color: #30a13d;
+    --player-color: purple;
+    --active-color: darkgreen;
+    --text-color: black;
+    --highlight: #65e073;
+    --selected-page: #96f68f;
+    --hover-playlist: #f2f2f2;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    background-color: var(--highlight);
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+#container {
+    display: grid;
+    grid-template-areas: "nav-bar main-area"
+        "playing-bar playing-bar";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr auto;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin: 0 0 0 0;
+}
+
+#nav-bar {
+    /*TODO : Assigner à la bonne zone de la grille */
+    grid-area: nav-bar;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+#main-area {
+    /*TODO : Assigner à la bonne zone de la grille */
+    grid-area: main-area;
+    padding: 0 10px;
+    overflow-y: auto;
+}
+
+#playing-bar {
+    /*TODO : Assigner à la bonne zone de la grille */
+    grid-area: playing-bar;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--main-color);
+}
+
+#nav-bar ul {
+    margin-right: 5px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+li :hover {
+    background-color: var(--selected-page);
+    text-decoration: underline;
+}
+
+li a {
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: white;
+    
+}
+#creators p {
+    text-align: right;
+    padding-right: 5%;
+}
+
+#search-form div {
+    padding: 10px;
+    height: 50px;
+}
+#search-form div span > input{
+    height: 33px;
+    width: 400px;
+    border-radius: 5px;
+    border-color: black;
+}
+#search-form div span > button{
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+
+.song-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid;
+    border-color: var(--highlight);
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding-left: 10px;
+}
+.song-item:hover {
+    border-width: 3px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+#controls {
+    align-items: center;
+    flex: 0.8;
+}
+
+#timeline {
+    /* modifie la couleur de l'input de type slider */
+    accent-color: var(--player-color);
+    flex: 1;
+    width: 400px;
+}
+
+.control-btn {
+    border: none;
+    background-color: white;
+}
+.image {
+    height : 150px;
+    width: 150px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.playlist-item {
+    align-items: center;
+    justify-content: baseline;
+    text-decoration: none;
+    color: black;
+    margin: 2px;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+
+
+.playlist-item:hover {
+    background-color: var(--hover-playlist);
+}
+
+.playlist-item * {
+    margin: 1px;
+}
+
+.playlist-item p {
+    align-content: center;
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    /*TODO : Gérer le texte trop grand */
+    white-space: nowrap;
+    width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.p1 {
+    color: var(--main-color) !important;
+    font-size: large;
+}
+
+.song-item>p {
+    flex: 0.25;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+section > a > div:hover .hidden {
+    visibility: visible;
+}
+
+
+
+ div > i {
+    transform: translate(-115%, -5px);
+ }
+
+.form-control {
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.form-group label {
+    margin: 5px;
+    font-weight: bold;
+}
+.form-group:nth-child(2) {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.playlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+#image-preview {
+    border: thin solid;
+    border-color: var(--highlight);
+    width: 200px;
+    height: 200px;
+}
+
+.saut {
+    padding-top: 25%;
+}
+#pen:hover {
+    color: red;
+}
+
+#buttons-container > button:hover {
+    color: purple;
+    zoom: 110%;
+}
+
+
+/* TODO : modifier l'affichage en bas de 800px*/
+@media only screen and (max-device-width: 800px),
+only screen and (max-width: 800px) {  
+    .playlist-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
