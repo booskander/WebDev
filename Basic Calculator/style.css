@@ -1,0 +1,23 @@
+#display {
+    width: 150px;
+    border-style: solid;
+}
+
+#button-container{
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+}
+
+#util-buttons{
+}
+
+#operators{}
+
+#num-buttons{}
+
+.operator {
+    width: 30px;
+}
