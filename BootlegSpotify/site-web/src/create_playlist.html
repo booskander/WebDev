@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favico.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v6.1.2/css/all.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script defer src="./assets/js/playlist_editor.js" type="module"></script>
+    <title>PolyPlay - Créer une Playlist</title>
+  </head>
+
+  <body id="container">
+    <header>
+      <nav id="nav-bar" class="flex-column">
+        <ul class="flex-column">
+          <li>
+            <a href="./index.html">
+              <i class="fa fa-music"></i>
+              <span>Ma Bibliothèque</span>
+            </a>
+          </li>
+          <li>
+            <a href="./create_playlist.html" class="active-page">
+              <i class="fa fa-plus"></i>
+              <span>Créer Playlist</span>
+            </a>
+          </li>
+          <li>
+            <a href="./about.html">
+              <i class="fa fa-info-circle"></i>
+              <span>À Propos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-area" class="flex-row">
+      <form class="form-group" id="playlist-form">
+        <div id="general-info" class="flex-row">
+          <fieldset class="form-control">
+            <legend>Informations générales</legend>
+            <div class="form-control flex-row">
+              <label for="name">Nom: </label>
+              <input type="text" id="name" placeholder="Playlist#1" required />
+            </div>
+            <div class="form-control flex-row">
+              <label for="description">Description: </label>
+              <input
+                type="text"
+                id="description"
+                placeholder="Nouvelle playlist"
+                required
+              />
+            </div>
+            <div class="form-control flex-row">
+              <label for="image">Image: </label>
+              <input type="file" id="image" accept="image/*" />
+            </div>
+          </fieldset>
+          <img
+            id="image-preview"
+            width="200px"
+            height="200px"
+          />
+        </div>
+        <fieldset class="form-control">
+          <legend>Chansons</legend>
+          <datalist id="song-dataList">
+            <option value="Whip"></option>
+            <option value="Overflow"></option>
+            <option value="Intrigue Fun"></option>
+            <option value="Bounce"></option>
+            <option value="Summer Pranks"></option>
+          </datalist>
+
+          <button id="add-song-btn" class="fa fa-plus"></button>
+          <div id="song-list">
+            <div>
+              <label for="song-1">#1 </label>
+              <input
+                class="song-input"
+                id="song-1"
+                type="select"
+                list="song-dataList"
+                required
+              />
+            </div>
+          </div>
+        </fieldset>
+        <input type="submit" value="Ajouter la playlist" id="playlist-submit" />
+      </form>
+      <button class="fa fa-trash" id="playlist-delete"></button>
+    </main>
+    <footer id="playing-bar">
+      <div>
+        <p>
+          Choisir une playlist à travers la
+          <a href="./index.html">Bibliothèque</a> pour la faire jouer
+        </p>
+      </div>
+      <div id="creators">
+        <p>étudiant.e 1 matricule</p>
+        <p>étudiant.e 2 matricule</p>
+      </div>
+    </footer>
+  </body>
+</html>

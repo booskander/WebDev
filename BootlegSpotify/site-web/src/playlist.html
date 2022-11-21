@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favico.ico" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v6.1.2/css/all.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script defer src="./assets/js/playlist.js" type="module"></script>
+    <title>PolyPlay</title>
+  </head>
+  <body id="container">
+    <header>
+      <nav id="nav-bar" class="flex-column">
+        <ul class="flex-column">
+          <li>
+            <a href="./index.html">
+              <i class="fa fa-music"></i>
+              <span>Ma Bibliothèque</span>
+            </a>
+          </li>
+          <li>
+            <a href="./create_playlist.html">
+              <i class="fa fa-plus"></i>
+              <span>Créer Playlist</span>
+            </a>
+          </li>
+          <li>
+            <a href="./about.html">
+              <i class="fa fa-info-circle"></i>
+              <span>À Propos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-area" class="flex-column">
+      <div id="songs-list">
+        <header id="playlist-header" class="flex-row">
+          <img id="playlist-img" width="80px" height="80px" />
+          <h1 id="playlist-title"></h1>
+          <a id="playlist-edit">
+            <i class="fa fa-2x fa-pencil"></i>
+          </a>
+        </header>
+        <section id="song-container" class="flex-column">
+          <div class="song-item flex-row">
+            <span>1</span>
+            <p>Whip</p>
+            <p>Electronic</p>
+            <p>prazkhanal</p>
+            <i class="fa-regular fa-2x fa-heart"></i>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer id="playing-bar">
+      <div id="now-playing">On joue : rien</div>
+      <div id="controls" class="flex-column">
+        <section id="buttons-container" class="flex-row">
+          <button
+            class="control-btn fa fa-2x fa-arrow-left"
+            id="previous"
+          ></button>
+          <button class="control-btn fa fa-2x fa-play" id="play"></button>
+          <button
+            class="control-btn fa fa-2x fa-arrow-right"
+            id="next"
+          ></button>
+          <button class="control-btn fa fa-2x fa-shuffle" id="shuffle"></button>
+          <button
+            class="control-btn fa fa-2x fa-volume-high"
+            id="mute"
+          ></button>
+        </section>
+        <section id="timeline-container" class="flex-row">
+          <span id="timeline-current">0:00</span>
+          <input id="timeline" type="range" max="100" value="0" />
+          <span id="timeline-end">5:00</span>
+        </section>
+      </div>
+      <div id="creators">
+        <p>étudiant.e 1 matricule</p>
+        <p>étudiant.e 2 matricule</p>
+      </div>
+    </footer>
+  </body>
+</html>

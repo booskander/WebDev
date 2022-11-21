@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favico.ico" />
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./assets/js/library.js" type="module"></script>
+    <title>PolyPlay</title>
+  </head>
+  <body id="container">
+    <header>
+      <nav id="nav-bar" class="flex-column">
+        <ul class="flex-column">
+          <li>
+            <a href="./index.html" class="active-page">
+              <i class="fa fa-music"></i>
+              <span>Ma Bibliothèque</span>
+            </a>
+          </li>
+          <li>
+            <a href="./create_playlist.html">
+              <i class="fa fa-plus"></i>
+              <span>Créer Playlist</span>
+            </a>
+          </li>
+          <li>
+            <a href="./about.html">
+              <i class="fa fa-info-circle"></i>
+              <span>À Propos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-area" class="flex-column">
+      <div id="search-bar">
+        <form id="search-form" class="flex-row">
+          <input id="search-input" type="text" />
+          <button id="search-btn" class="fa fa-2x fa-search" type="submit"></button>
+          <section id="exact-parent" class="flex-row">
+            <input id="exact-search" type="checkbox" />
+            <label for="exact-search">Exact</label>
+          </section>
+        </form>
+      </div>
+      <div id="playlist-list">
+        <h1>Mes Playlists</h1>
+        <section id="playlist-container" class="playlist-container">
+          <a href="./playlist.html" class="playlist-item flex-column">
+            <div class="playlist-preview">
+              <img />
+              <i class="fa fa-2x fa-play-circle hidden playlist-play-icon"></i>
+            </div>
+            <p>Ma Premiere Playlist</p>
+            <p>Playlist de base</p>
+          </a>
+        </section>
+      </div>
+      <div id="songs-list">
+        <h1>Mes Chansons</h1>
+        <section id="song-container" class="flex-column">
+          <div class="song-item flex-row">
+            <p>Whip</p>
+            <p>Electronic</p>
+            <p>prazkhanal</p>
+            <button class="fa-regular fa-2x fa-heart"></button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer id="playing-bar">
+      <div>
+        <p>
+          Choisir une playlist à travers la
+          <a href="./index.html">Bibliothèque</a> pour la faire jouer
+        </p>
+      </div>
+      <div id="creators">
+        <p>étudiant.e 1 matricule</p>
+        <p>étudiant.e 2 matricule</p>
+      </div>
+    </footer>
+  </body>
+</html>
